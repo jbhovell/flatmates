@@ -32,7 +32,7 @@ class Index extends React.Component {
     }
     requestSubmitHandler = (event) => {
         event.preventDefault();
-        fetch('/api/lend', {
+        fetch('/api/borrow', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -43,7 +43,7 @@ class Index extends React.Component {
                 borrower: this.state.borrower,
                 amount: parseFloat(this.state.amount).toFixed(2)
             })
-        }).then(() => window.open("/api/users", "_self"))
+        }).then(() => window.open("/api/user?name=" + this.state.borrower, "_self"))
     }
     lenderChangeHandler = (event) => {
         this.setState({ lender: event.target.value });

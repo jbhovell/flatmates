@@ -50,7 +50,7 @@ def add():
         return "ERROR: please provide a user name to add ",  400
 
 
-@app.route('/api/lend', methods=['POST'])
+@app.route('/api/borrow', methods=['POST'])
 def lend():
     lender = request.json['lender'].lower()
     borrower = request.json['borrower'].lower()
