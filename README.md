@@ -1,4 +1,4 @@
-# About the Project
+# About the project
 
 I built this app to learn React. I am still learning and improving it.
 
@@ -10,7 +10,7 @@ The flatmates borrow money from each other frequently and have trouble rememberi
 
 The project name comes from a BBC drama on iPlayer now.
 
-# It Uses
+# It uses
 
 - [x] python 3
 - [x] Flask
@@ -25,7 +25,7 @@ The project name comes from a BBC drama on iPlayer now.
 - [ ] Pytest
 - [ ] Let's Encrypt
 
-# API Specification
+# API specification
 
 #### User object
 
