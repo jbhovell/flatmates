@@ -17,12 +17,11 @@ The project name comes from a BBC drama on iPlayer now.
 - [x] Rest api
 - [x] React
 
-- [ ] Grafana
 - [ ] Docker
-- [ ] Elastic Beanstalk
-- [ ] Heroku
-- [ ] Circle ci
-- [ ] Let's Encrypt
+- [ ] Built on CircleCI
+- [ ] Deployed to Heroku
+- [ ] Install a cert
+
 
 # API specification
 
