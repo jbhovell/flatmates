@@ -72,7 +72,7 @@ class Index extends React.Component {
                     The flatmates borrow money from each other frequently and have trouble remembering who owes whom, and how much.
                 </p>
                 <h3>
-                    <a href="/api/users">All</a>
+                    <a href="/api/users">Users</a>
                 </h3>
                 <p>
                     <h3 style={liststyle}>Add</h3>
