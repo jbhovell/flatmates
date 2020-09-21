@@ -10,21 +10,18 @@ The flatmates borrow money from each other frequently and have trouble rememberi
 
 The project name comes from a BBC drama on iPlayer now.
 
-# It used
+# It uses
 
 - [x] python 3
 - [x] Flask
 - [x] Rest api
 - [x] React
 
-# It will use
-
 - [ ] Grafana
 - [ ] Docker
 - [ ] Elastic Beanstalk
 - [ ] Heroku
 - [ ] Circle ci
-
 - [ ] Let's Encrypt
 
 # API specification
