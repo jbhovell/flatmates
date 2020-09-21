@@ -10,16 +10,19 @@ The flatmates borrow money from each other frequently and have trouble rememberi
 
 The project name comes from a BBC drama on iPlayer now.
 
-# It uses
+# It used
 
 - [x] python 3
 - [x] Flask
 - [x] Rest api
 - [x] Pipenv
 - [x] React
+
+# It will use
+
 - [ ] Grafana
 - [ ] Docker
-- [ ] Elastic Beanstalk deployment
+- [ ] Elastic Beanstalk
 - [ ] Heroku
 - [ ] Circle ci
 - [ ] Pytest
@@ -53,11 +56,6 @@ The project name comes from a BBC drama on iPlayer now.
 | Create lend    | POST        | /api/lend                   | `{"lender":<name of lender>,"borrower":<name of borrower>,"amount":5.25}` | N/A                          | `{"users":<updated User objects for <lender> and <borrower> (sorted by name)>}` |
 
 ## Running the tests
-
-To run the tests, run `pytest test_flat_mates.py`
-
-Alternatively, run the pytest module:
-`python3 -m pytest test_flatmates.py`
 
 ## Running the application
 
