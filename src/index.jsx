@@ -30,7 +30,7 @@ class Index extends React.Component {
     searchChangeHandler = (event) => {
         this.setState({ username: event.target.value });
     }
-    requestSubmitHandler = (event) => {
+    borrowSubmitHandler = (event) => {
         event.preventDefault();
         fetch('/api/borrow', {
             method: 'POST',
@@ -72,10 +72,10 @@ class Index extends React.Component {
                     The flatmates borrow money from each other frequently and have trouble remembering who owes whom, and how much.
                 </p>
                 <h3>
-                    <a href="/api/users">Show All</a>
+                    <a href="/api/users">All</a>
                 </h3>
                 <p>
-                    <h3 style={liststyle}>Add User</h3>
+                    <h3 style={liststyle}>Add</h3>
                     <form onSubmit={this.addSubmitHandler}>
                         <input
                             type='text' maxlength="6" size="6" placeholder="name" name="newuser"
@@ -84,7 +84,7 @@ class Index extends React.Component {
                     </form>
                 </p>
                 <p>
-                    <h3 style={liststyle}>Search User</h3>
+                    <h3 style={liststyle}>Search</h3>
                     <form onSubmit={this.searchSubmitHandler}>
                         <input
                             type='text' maxlength="6" size="6" placeholder="name"
@@ -93,8 +93,8 @@ class Index extends React.Component {
                     </form>
                 </p>
                 <p>
-                    <h3 style={liststyle}>Request Borrowing</h3>
-                    <form onSubmit={this.requestSubmitHandler}>
+                    <h3 style={liststyle}>Borrow</h3>
+                    <form onSubmit={this.borrowSubmitHandler}>
                         <input
                             type='text' maxlength="6" size="6" placeholder="lender"
                             onChange={this.lenderChangeHandler}
