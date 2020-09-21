@@ -15,7 +15,6 @@ The project name comes from a BBC drama on iPlayer now.
 - [x] python 3
 - [x] Flask
 - [x] Rest api
-- [x] Pipenv
 - [x] React
 
 # It will use
@@ -25,7 +24,7 @@ The project name comes from a BBC drama on iPlayer now.
 - [ ] Elastic Beanstalk
 - [ ] Heroku
 - [ ] Circle ci
-- [ ] Pytest
+
 - [ ] Let's Encrypt
 
 # API specification
@@ -53,7 +52,7 @@ The project name comes from a BBC drama on iPlayer now.
 | List all users | GET         | /api/users                  | N/A                                                                       | `<all users>`                |
 | List a user    | GET         | /api/user?name=`<username>` | N/A                                                                       | `<User object for the user>` |
 | Create user    | POST        | /api/add                    | `{"user":<name of new user (unique)>}`                                    | N/A                          | `<User object for new user>`                                                    |
-| Create lend    | POST        | /api/lend                   | `{"lender":<name of lender>,"borrower":<name of borrower>,"amount":5.25}` | N/A                          | `{"users":<updated User objects for <lender> and <borrower> (sorted by name)>}` |
+| Create borrow  | POST        | /api/borrow                   | `{"lender":<name of lender>,"borrower":<name of borrower>,"amount":5.25}` | N/A                          | `{"users":<updated User objects for <lender> and <borrower> (sorted by name)>}` |
 
 ## Running the tests
 
