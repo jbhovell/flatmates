@@ -7,6 +7,22 @@ class Index extends React.Component {
         super(props);
         this.state = { username: '' };
     }
+    addSubmitHandler = (event) => {
+        event.preventDefault();
+        fetch('/api/add', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                user: this.state.newuser
+            })
+        }).then(() => window.open("/api/user?name=" + this.state.newuser, "_self"))
+    }
+    addChangeHandler = (event) => {
+        this.setState({ newuser: event.target.value });
+    }
     searchSubmitHandler = (event) => {
         event.preventDefault();
         window.open("/api/user?name=" + this.state.username, "_self")
@@ -16,7 +32,18 @@ class Index extends React.Component {
     }
     requestSubmitHandler = (event) => {
         event.preventDefault();
-        alert(this.state.lender + this.state.borrower + this.state.amount)
+        fetch('/api/lend', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                lender: this.state.lender,
+                borrower: this.state.borrower,
+                amount: parseFloat(this.state.amount).toFixed(2)
+            })
+        }).then(() => window.open("/api/users", "_self"))
     }
     lenderChangeHandler = (event) => {
         this.setState({ lender: event.target.value });
@@ -33,6 +60,11 @@ class Index extends React.Component {
             fontFamily: "Arial",
             textAlign: "center"
         };
+
+        const liststyle = {
+            color: "blue",
+            textDecoration: "underline"
+        }
         return (
             <div style={fmstyle}>
                 <h1> Flatmates</h1>
@@ -43,7 +75,16 @@ class Index extends React.Component {
                     <a href="/api/users">Show All</a>
                 </h3>
                 <p>
-                    <h3>Search</h3>
+                    <h3 style={liststyle}>Add User</h3>
+                    <form onSubmit={this.addSubmitHandler}>
+                        <input
+                            type='text' maxlength="6" size="6" placeholder="name" name="newuser"
+                            onChange={this.addChangeHandler}
+                        />
+                    </form>
+                </p>
+                <p>
+                    <h3 style={liststyle}>Search User</h3>
                     <form onSubmit={this.searchSubmitHandler}>
                         <input
                             type='text' maxlength="6" size="6" placeholder="name"
@@ -52,7 +93,7 @@ class Index extends React.Component {
                     </form>
                 </p>
                 <p>
-                    <h3>Request</h3>
+                    <h3 style={liststyle}>Request Borrowing</h3>
                     <form onSubmit={this.requestSubmitHandler}>
                         <input
                             type='text' maxlength="6" size="6" placeholder="lender"
@@ -71,7 +112,6 @@ class Index extends React.Component {
                         />
                     </form>
                 </p>
-
             </div>
         );
     }
