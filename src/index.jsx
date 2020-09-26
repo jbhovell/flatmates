@@ -61,7 +61,7 @@ class Index extends React.Component {
         };
 
         const inputstyle = {
-            border: "thin solid red",
+            border: "thin solid green",
             padding: "0.5rem",
             margin: "1rem"
         }
@@ -69,7 +69,7 @@ class Index extends React.Component {
             <div style={fmstyle}>
                 <h1> Flatmates</h1>
                 <p>
-                    The flatmates borrow money from each other frequently and have trouble remembering who owes whom, and how much.
+                    The flatmates often borrow money from each other. They need an app to log who owes whom and how much.
                 </p>
                 <h3>
                     <a href="/api/users">Users</a>
@@ -77,7 +77,7 @@ class Index extends React.Component {
                 <p>
                     <form onSubmit={this.addSubmitHandler}>
                         <input
-                            type='text' maxlength="8" size="8" placeholder="Add User" name="newuser" style={inputstyle}
+                            type='text' maxlength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
                             onChange={this.addChangeHandler}
                         />
                     </form>
@@ -85,7 +85,7 @@ class Index extends React.Component {
                 <p>
                     <form onSubmit={this.searchSubmitHandler}>
                         <input
-                            type='text' maxlength="8" size="8" placeholder="Search User" style={inputstyle}
+                            type='text' maxlength="10" size="10" placeholder="Search User" style={inputstyle}
                             onChange={this.searchChangeHandler}
                         />
                     </form>

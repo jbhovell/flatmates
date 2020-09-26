@@ -1,11 +1,9 @@
 # About the project
 
-I built this app to learn React. I am still learning and improving it.
-
-This app solved an imaginary problem.
+I built this app to demo React. I am still learning the frontend framework and making improvements to this project.
 
 ```
-The flatmates borrow money from each other frequently and have trouble remembering who owes whom, and how much.
+The flatmates often borrow money from each other. They need an app to log who owes whom and how much.
 ```
 
 The project name comes from a BBC drama on iPlayer now.
