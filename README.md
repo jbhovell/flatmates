@@ -10,16 +10,16 @@ The project name comes from a BBC drama on iPlayer now.
 
 # It uses
 
+- [x] React
 - [x] python 3
 - [x] Flask
 - [x] Rest api
-- [x] React
 
 - [ ] Docker
-- [ ] Built on CircleCI
-- [ ] Deployed to Heroku
-- [ ] Install a cert
-
+- [ ] Nginx
+- [ ] CircleCI
+- [ ] Heroku
+- [ ] SSL cert
 
 # API specification
 
