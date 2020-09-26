@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "webpack --mode development",
-    "start": "webpack --mode development --watch"
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode development"
   },
   "keywords": [],
   "author": "",
