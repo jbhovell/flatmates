@@ -65,6 +65,14 @@ class Index extends React.Component {
             padding: "0.5rem",
             margin: "1rem"
         }
+        const submitstyle = {
+            padding: "5px 15px",
+            background: "#ccc",
+            border: "0 none",
+            cursor: "pointer",
+            borderRadius: "5px"
+        }
+
         return (
             <div style={fmstyle}>
                 <h1> Flatmates</h1>
@@ -105,7 +113,7 @@ class Index extends React.Component {
                             onChange={this.amountChangeHandler}
                         />
                         <input
-                            type='submit' value="Borrow"
+                            type='submit' value="Borrow" style={submitstyle}
                         />
                     </form>
                 </p>
