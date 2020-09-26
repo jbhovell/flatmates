@@ -60,9 +60,10 @@ class Index extends React.Component {
             textAlign: "center"
         };
 
-        const liststyle = {
-            color: "blue",
-            textDecoration: "underline"
+        const inputstyle = {
+            border: "thin solid red",
+            padding: "0.5rem",
+            margin: "1rem"
         }
         return (
             <div style={fmstyle}>
@@ -74,40 +75,37 @@ class Index extends React.Component {
                     <a href="/api/users">Users</a>
                 </h3>
                 <p>
-                    <h3 style={liststyle}>Add</h3>
                     <form onSubmit={this.addSubmitHandler}>
                         <input
-                            type='text' maxlength="6" size="6" placeholder="name" name="newuser"
+                            type='text' maxlength="8" size="8" placeholder="Add User" name="newuser" style={inputstyle}
                             onChange={this.addChangeHandler}
                         />
                     </form>
                 </p>
                 <p>
-                    <h3 style={liststyle}>Search</h3>
                     <form onSubmit={this.searchSubmitHandler}>
                         <input
-                            type='text' maxlength="6" size="6" placeholder="name"
+                            type='text' maxlength="8" size="8" placeholder="Search User" style={inputstyle}
                             onChange={this.searchChangeHandler}
                         />
                     </form>
                 </p>
                 <p>
-                    <h3 style={liststyle}>Borrow</h3>
                     <form onSubmit={this.borrowSubmitHandler}>
                         <input
-                            type='text' maxlength="6" size="6" placeholder="lender"
+                            type='text' maxlength="8" size="8" placeholder="lender" style={inputstyle}
                             onChange={this.lenderChangeHandler}
                         />
                         <input
-                            type='text' maxlength="6" size="6" placeholder="borrower"
+                            type='text' maxlength="8" size="8" placeholder="borrower" style={inputstyle}
                             onChange={this.borrowerChangeHandler}
                         />
                         <input
-                            type='text' maxlength="6" size="6" placeholder="amount"
+                            type='text' maxlength="6" size="6" placeholder="amount" style={inputstyle}
                             onChange={this.amountChangeHandler}
                         />
                         <input
-                            type='submit' value="Submit"
+                            type='submit' value="Borrow"
                         />
                     </form>
                 </p>
