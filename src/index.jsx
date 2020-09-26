@@ -35,7 +35,6 @@ class Index extends React.Component {
         fetch('/api/borrow', {
             method: 'POST',
             headers: {
-                'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({

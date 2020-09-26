@@ -1,1 +1,1 @@
-{"users": []}
+{"users": [{"name": "adam", "owes": {"dan": 100}, "owed_by": {}, "balance": -100.0}, {"name": "bob", "owes": {}, "owed_by": {}, "balance": 0.0}, {"name": "chris", "owes": {"test": 1.0}, "owed_by": {}, "balance": -1.0}, {"name": "dan", "owes": {}, "owed_by": {"adam": 100}, "balance": 100.0}, {"name": "test", "owes": {}, "owed_by": {"chris": 1.0}, "balance": 1.0}]}

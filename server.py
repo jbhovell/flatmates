@@ -54,7 +54,7 @@ def add():
 def lend():
     lender = request.json['lender'].lower()
     borrower = request.json['borrower'].lower()
-    amount = request.json['amount']
+    amount = float(request.json['amount'])
     update(lender, borrower, amount)
     with open('users.json', 'w') as f:
         json.dump(database, f)
