@@ -1,8 +1,7 @@
 import os
 import json
 import flask
-from flask import jsonify, request, render_template
-
+from flask import jsonify, request, render_template, send_from_directory
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -12,6 +11,12 @@ with open('users.json', 'r') as f:
     database = json.load(f)
 
 db_users = database['users']
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route('/', methods=['GET'])
