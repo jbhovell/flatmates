@@ -14,12 +14,12 @@ The project name comes from a BBC drama on iPlayer now.
 - [x] python 3
 - [x] Flask
 - [x] Rest api
+- [x] Heroku
+- [x] SSL cert
 
 - [ ] Docker
 - [ ] Nginx
 - [ ] CircleCI
-- [ ] Heroku
-- [ ] SSL cert
 
 # API specification
 
