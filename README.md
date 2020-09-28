@@ -1,7 +1,10 @@
 # About the project
 
-I built this app to demontrate how to use the React framework to my team. I am still learning the frontend framework and making improvements to this project.
+I built this app to demontrate how to use the React framework to my team. I used Python and Flask for the backend API. 
 
+I am still learning the frontend framework and making improvements to this project.
+
+### Scenario:
 ```
 The flatmates often borrow money from each other. They need an app to log who owes whom and how much.
 ```
