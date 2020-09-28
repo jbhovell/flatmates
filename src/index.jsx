@@ -70,14 +70,16 @@ class Index extends React.Component {
         const inputstyle = {
             border: "thin solid green",
             padding: "0.5rem",
-            margin: "1rem"
+            margin: "1rem",
+            textAlign: "center"
         }
         const submitstyle = {
             padding: "5px 15px",
             background: "#ccc",
             border: "0 none",
             cursor: "pointer",
-            borderRadius: "5px"
+            borderRadius: "5px",
+            textAlign: "center"
         }
 
         return (
