@@ -63,7 +63,9 @@ class Index extends React.Component {
             fontFamily: "Arial",
             textAlign: "center",
             borderStyle: "dashed",
-            borderWidth: "1px"
+            borderWidth: "1px",
+            width: "50%",
+            margin: "auto"
         };
         const inputstyle = {
             border: "thin solid green",
