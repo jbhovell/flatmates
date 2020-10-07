@@ -6,7 +6,7 @@ from flask import jsonify, request, render_template, send_from_directory
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-with open('users.json', 'r+') as f:
+with open('users.json', 'r') as f:
     database = json.load(f)
 
 db_users = database['users']
@@ -47,7 +47,8 @@ def add():
         user = {"name": request.json['user'].lower(),
                 "owes": {}, "owed_by": {}, "balance": 0.0}
         db_users.append(user)
-        json.dump(database, f)
+        with open('users.json', 'w') as f:
+            json.dump(database, f)
         return jsonify(user)
     else:
         return "ERROR: please provide a user name to add ",  400
@@ -59,7 +60,8 @@ def borrow():
     borrower = request.json['borrower'].lower()
     amount = float(request.json['amount'])
     update(lender, borrower, amount)
-    json.dump(database, f)
+    with open('users.json', 'w') as f:
+        json.dump(database, f)
 
     return users()
 
