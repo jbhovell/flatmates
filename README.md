@@ -65,6 +65,6 @@ navigate to http://localhost:3000 in a browser
 
 the front page provides a simple user interface for listing ,adding, searching users and borrowing money.
 
-<img src="static/flatmats.png" width="30px">
+<img src="static/flatmates.png" width="30px">
 
 
