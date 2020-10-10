@@ -14,6 +14,8 @@ The project name comes from a BBC drama on iPlayer now.
 # It uses
 
 - [x] React
+- [x] Webpack
+- [x] Babel
 - [x] python 3
 - [x] Flask
 - [x] Rest api
@@ -60,4 +62,9 @@ npm run dev
 python3 server.py
 ```
 navigate to http://localhost:3000 in a browser
+
+the front page provides a simple user interface for listing ,adding, searching users and borrowing money.
+
+<img src="static/flatmats.png" width="30px">
+
 
