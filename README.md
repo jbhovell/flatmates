@@ -25,6 +25,7 @@ The front page provides a simple user interface for listing, adding, searching u
 - [x] Flask
 - [x] Rest api
 - [ ] Pytest
+- [ ] Jest for React
 - [ ] Heroku
 - [ ] SSL cert
 - [ ] Docker
