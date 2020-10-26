@@ -2,7 +2,7 @@
 
 I built this application to demonstrate the React framework to my team (all are backend developers). I used Python and Flask to create the backend REST API. 
 
-I am still learning the frontend framework and making improvements to this project.
+I am still learning React and making improvements to this project while learning.
 
 ### Scenario:
 ```
