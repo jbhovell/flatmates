@@ -32,7 +32,7 @@ The front page provides a simple user interface for listing, adding, searching u
 - [ ] Docker
 - [ ] Nginx
 - [ ] CircleCI
-
+- [ ] GraphQL
 # API specification
 
 #### User object
