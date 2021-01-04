@@ -26,11 +26,9 @@ The front page provides a simple user interface for listing, adding, searching u
 - [x] Rest api
 - [ ] Pytest
 - [ ] Jest for React
-- [ ] Heroku
 - [ ] SSL cert
-- [ ] Docker
+- [ ] Docker 
 - [ ] Nginx
-- [ ] CircleCI
 
 # API specification
 
