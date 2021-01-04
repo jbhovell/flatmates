@@ -1,8 +1,8 @@
 # About the project
 
-I built this application to demonstrate the React framework to my team (all are backend developers). I used Python and Flask to create the backend REST API. 
+I built this application to demonstrate the React framework to my teammates (all are backend developers). I used Python and Flask to create the backend REST API. 
 
-I am still learning the frontend framework and making improvements to this project.
+I am still learning React and making improvements to this project while learning.
 
 ### Scenario:
 ```
@@ -24,12 +24,18 @@ The front page provides a simple user interface for listing, adding, searching u
 - [x] python 3
 - [x] Flask
 - [x] Rest api
+- [ ] SQLite
 - [ ] Pytest
 - [ ] Jest for React
 - [ ] SSL cert
 - [ ] Docker 
 - [ ] Nginx
+<<<<<<< HEAD
 
+=======
+- [ ] CircleCI
+- [ ] GraphQL
+>>>>>>> 82844662f2e6511aa08660f17b28e686131d4bfa
 # API specification
 
 #### User object
