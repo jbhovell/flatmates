@@ -30,12 +30,7 @@ The front page provides a simple user interface for listing, adding, searching u
 - [ ] SSL cert
 - [ ] Docker 
 - [ ] Nginx
-<<<<<<< HEAD
 
-=======
-- [ ] CircleCI
-- [ ] GraphQL
->>>>>>> 82844662f2e6511aa08660f17b28e686131d4bfa
 # API specification
 
 #### User object
