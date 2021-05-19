@@ -20,15 +20,9 @@ class Index extends React.Component {
             })
         }).then(() => window.open("/api/user?name=" + this.state.newuser, "_self"))
     }
-    addChangeHandler = (event) => {
-        this.setState({ newuser: event.target.value });
-    }
     searchSubmitHandler = (event) => {
         event.preventDefault();
         window.open("/api/user?name=" + this.state.username, "_self")
-    }
-    searchChangeHandler = (event) => {
-        this.setState({ username: event.target.value });
     }
     borrowSubmitHandler = (event) => {
         event.preventDefault();
@@ -44,14 +38,9 @@ class Index extends React.Component {
             })
         }).then(() => window.open("/api/user?name=" + this.state.borrower, "_self"))
     }
-    lenderChangeHandler = (event) => {
-        this.setState({ lender: event.target.value });
-    }
-    borrowerChangeHandler = (event) => {
-        this.setState({ borrower: event.target.value });
-    }
-    amountChangeHandler = (event) => {
-        this.setState({ amount: event.target.value });
+
+    stateChangeHandler = e => {
+        this.setState({[e.target.name]:e.target.value})
     }
 
     render() {
@@ -96,31 +85,31 @@ class Index extends React.Component {
                         <form onSubmit={this.addSubmitHandler}>
                             <input
                                 type='text' maxlength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
-                                onChange={this.addChangeHandler}
+                                onChange={this.stateChangeHandler}
                             />
                         </form>
                     </p>
                     <p>
                         <form onSubmit={this.searchSubmitHandler}>
                             <input
-                                type='text' maxlength="10" size="10" placeholder="Search User" style={inputstyle}
-                                onChange={this.searchChangeHandler}
+                                type='text' maxlength="10" size="10" placeholder="Search User" style={inputstyle} name="username"
+                                onChange={this.stateChangeHandler}
                             />
                         </form>
                     </p>
                     <p>
                         <form onSubmit={this.borrowSubmitHandler}>
                             <input
-                                type='text' maxlength="8" size="8" placeholder="lender" style={inputstyle}
-                                onChange={this.lenderChangeHandler}
+                                type='text' maxlength="8" size="8" placeholder="lender" style={inputstyle} name="lender"
+                                onChange={this.stateChangeHandler}
                             />
                             <input
-                                type='text' maxlength="8" size="8" placeholder="borrower" style={inputstyle}
-                                onChange={this.borrowerChangeHandler}
+                                type='text' maxlength="8" size="8" placeholder="borrower" style={inputstyle} name="borrower"
+                                onChange={this.stateChangeHandler}
                             />
                             <input
-                                type='text' maxlength="6" size="6" placeholder="amount" style={inputstyle}
-                                onChange={this.amountChangeHandler}
+                                type='text' maxlength="6" size="6" placeholder="amount" style={inputstyle} name="amount"
+                                onChange={this.stateChangeHandler}
                             />
                             <input
                                 type='submit' value="Borrow" style={submitstyle}
