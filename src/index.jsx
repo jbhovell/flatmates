@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import axios from 'axios';
 
 class Index extends React.Component {
     constructor(props) {
@@ -9,15 +9,27 @@ class Index extends React.Component {
     }
     addSubmitHandler = (event) => {
         event.preventDefault();
-        fetch('/api/add', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
+
+        // fetch('/api/add', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         user: this.state.newuser
+        //     })
+        // })
+        axios({
+            method: 'post',
+            url: '/api/add',
+            data: {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
                 user: this.state.newuser
-            })
+            }
         }).then(() => window.open("/api/user?name=" + this.state.newuser, "_self"))
     }
     searchSubmitHandler = (event) => {
@@ -26,21 +38,34 @@ class Index extends React.Component {
     }
     borrowSubmitHandler = (event) => {
         event.preventDefault();
-        fetch('/api/borrow', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
+        // fetch('/api/borrow', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         lender: this.state.lender,
+        //         borrower: this.state.borrower,
+        //         amount: parseFloat(this.state.amount).toFixed(2)
+        //     })
+        // }).then(() => window.open("/api/user?name=" + this.state.borrower, "_self"))
+        axios({
+            method: 'post',
+            url: '/api/borrow',
+            data: {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
                 lender: this.state.lender,
                 borrower: this.state.borrower,
                 amount: parseFloat(this.state.amount).toFixed(2)
-            })
+            }
         }).then(() => window.open("/api/user?name=" + this.state.borrower, "_self"))
     }
 
     stateChangeHandler = e => {
-        this.setState({[e.target.name]:e.target.value})
+        this.setState({ [e.target.name]: e.target.value })
     }
 
     render() {
