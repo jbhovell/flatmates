@@ -19,7 +19,7 @@ class Index extends React.Component {
                 },
                 user: this.state.newuser
             }
-        }).then(() => window.open("/api/user?name=" + this.state.newuser, "_self"))
+        }).then(resp => this.setState({username: ['jianfang', 'mark', 'alice', 'bob', `${resp.data.name}`]}))
     }
     searchSubmitHandler = (event) => {
         event.preventDefault();
@@ -101,27 +101,27 @@ class Index extends React.Component {
                     </h3>
                         <form onSubmit={this.addSubmitHandler}>
                             <input
-                                type='text' maxlength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
+                                type='text' maxLength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
                                 onChange={this.stateChangeHandler}
                             />
                         </form>
                         <form onSubmit={this.searchSubmitHandler}>
                             <input
-                                type='text' maxlength="10" size="10" placeholder="Search User" style={inputstyle} name="username"
+                                type='text' maxLength="10" size="10" placeholder="Search User" style={inputstyle} name="username"
                                 onChange={this.stateChangeHandler}
                             />
                         </form>
                         <form onSubmit={this.borrowSubmitHandler}>
                             <input
-                                type='text' maxlength="8" size="8" placeholder="lender" style={inputstyle} name="lender"
+                                type='text' maxLength="8" size="8" placeholder="lender" style={inputstyle} name="lender"
                                 onChange={this.stateChangeHandler}
                             />
                             <input
-                                type='text' maxlength="8" size="8" placeholder="borrower" style={inputstyle} name="borrower"
+                                type='text' maxLength="8" size="8" placeholder="borrower" style={inputstyle} name="borrower"
                                 onChange={this.stateChangeHandler}
                             />
                             <input
-                                type='text' maxlength="6" size="6" placeholder="amount" style={inputstyle} name="amount"
+                                type='text' maxLength="6" size="6" placeholder="amount" style={inputstyle} name="amount"
                                 onChange={this.stateChangeHandler}
                             />
                             <input
@@ -133,9 +133,9 @@ class Index extends React.Component {
                     <div style={tablestyle}>
                         <table>
                           <tbody>
-                            <tr><td></td>{this.state.username.map(u=><td>{u}</td>)}</tr>
+                            <tr><td></td>{this.state.username.map((u,i)=><td key={i}>{u}</td>)}</tr>
                             {
-                                this.state.username.map(u=><tr><td>{u}</td></tr>)
+                                this.state.username.map((u,i)=><tr key={i}><td>{u}</td></tr>)
                             }
                          </tbody>
                         </table>
