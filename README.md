@@ -71,6 +71,3 @@ python3 server.py
 navigate to http://localhost:3000 in a browser
 
 
-## To Do: 
-
-load all the users and balances in a table without search
