@@ -84,23 +84,18 @@ class Index extends React.Component {
                     <h3>
                         <a href="/api/users">Users</a>
                     </h3>
-                    <p>
                         <form onSubmit={this.addSubmitHandler}>
                             <input
                                 type='text' maxlength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
                                 onChange={this.stateChangeHandler}
                             />
                         </form>
-                    </p>
-                    <p>
                         <form onSubmit={this.searchSubmitHandler}>
                             <input
                                 type='text' maxlength="10" size="10" placeholder="Search User" style={inputstyle} name="username"
                                 onChange={this.stateChangeHandler}
                             />
                         </form>
-                    </p>
-                    <p>
                         <form onSubmit={this.borrowSubmitHandler}>
                             <input
                                 type='text' maxlength="8" size="8" placeholder="lender" style={inputstyle} name="lender"
@@ -118,7 +113,6 @@ class Index extends React.Component {
                                 type='submit' value="Borrow" style={submitstyle}
                             />
                         </form>
-                    </p>
                 </div>
             </div>
         );
