@@ -118,7 +118,7 @@ class Index extends React.Component {
                           <tbody>
                             <tr><td></td>{this.state.users.map((u,i)=><td style={td}key={i}>{`${u.name}(${u.balance})`}</td>)}</tr>
                             {
-                                this.state.users.map((u,i)=><tr key={i}><td style={td}>{u.name}</td></tr>)
+                                this.state.users.map((u,i)=><tr key={i}><td style={td}>{`${u.name}(${u.balance})`}</td></tr>)
                             }
                          </tbody>
                         </table>
