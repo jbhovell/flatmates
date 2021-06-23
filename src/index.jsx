@@ -96,6 +96,16 @@ class Index extends React.Component {
                     The flatmates often borrow money from each other. They need an app to log who owes whom and how much.
                 </p>
                 <div style={boxstyle}>
+                    <div style={tablestyle}>
+                        <table>
+                          <tbody>
+                            <tr><td></td>{this.state.username.map((u,i)=><td key={i}>{u}</td>)}</tr>
+                            {
+                                this.state.username.map((u,i)=><tr key={i}><td>{u}</td></tr>)
+                            }
+                         </tbody>
+                        </table>
+                    </div>
                     <h3>
                         <a href="/api/users">Users</a>
                     </h3>
@@ -128,18 +138,6 @@ class Index extends React.Component {
                                 type='submit' value="Borrow" style={submitstyle}
                             />
                         </form>
-                </div>
-                <div style={tableboxstyle}>
-                    <div style={tablestyle}>
-                        <table>
-                          <tbody>
-                            <tr><td></td>{this.state.username.map((u,i)=><td key={i}>{u}</td>)}</tr>
-                            {
-                                this.state.username.map((u,i)=><tr key={i}><td>{u}</td></tr>)
-                            }
-                         </tbody>
-                        </table>
-                    </div>
                 </div>
             </div>
         );
