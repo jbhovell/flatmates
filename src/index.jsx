@@ -94,7 +94,7 @@ class Index extends React.Component {
             fontFamily: "Arial",
             textAlign: "center",
             borderCollapse: "collapse",
-            width: "50%",
+            width: "75%",
             margin:"auto",
             padding: "2rem",
         }
@@ -102,7 +102,7 @@ class Index extends React.Component {
         const td = {
             border: "1px solid #dddddd",
             textAlign: "left",
-            padding: "8px",
+            padding: "10px",
             borderColor: "#4CAF50",
             borderRadius: "5px"
         }
