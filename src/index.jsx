@@ -127,9 +127,6 @@ class Index extends React.Component {
                          </tbody>
                         </table>
                     </div>
-                    <h3>
-                        <a href="/api/users">Users</a>
-                    </h3>
                         <form onSubmit={this.addSubmitHandler}>
                             <input
                                 type='text' maxLength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
