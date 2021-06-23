@@ -89,6 +89,14 @@ class Index extends React.Component {
             padding: "2rem",
         }
 
+        const td = {
+            border: "1px solid #dddddd",
+            textAlign: "left",
+            padding: "8px",
+            borderColor: "#4CAF50",
+            borderRadius: "5px"
+        }
+
         return (
             <div style={fmstyle}>
                 <h1> Flatmates</h1>
@@ -99,9 +107,9 @@ class Index extends React.Component {
                     <div style={tablestyle}>
                         <table>
                           <tbody>
-                            <tr><td></td>{this.state.username.map((u,i)=><td key={i}>{u}</td>)}</tr>
+                            <tr><td></td>{this.state.username.map((u,i)=><td style={td}key={i}>{u}</td>)}</tr>
                             {
-                                this.state.username.map((u,i)=><tr key={i}><td>{u}</td></tr>)
+                                this.state.username.map((u,i)=><tr key={i}><td style={td}>{u}</td></tr>)
                             }
                          </tbody>
                         </table>
