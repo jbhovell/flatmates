@@ -9,17 +9,6 @@ class Index extends React.Component {
     }
     addSubmitHandler = (event) => {
         event.preventDefault();
-
-        // fetch('/api/add', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify({
-        //         user: this.state.newuser
-        //     })
-        // })
         axios({
             method: 'post',
             url: '/api/add',
@@ -38,17 +27,6 @@ class Index extends React.Component {
     }
     borrowSubmitHandler = (event) => {
         event.preventDefault();
-        // fetch('/api/borrow', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify({
-        //         lender: this.state.lender,
-        //         borrower: this.state.borrower,
-        //         amount: parseFloat(this.state.amount).toFixed(2)
-        //     })
-        // }).then(() => window.open("/api/user?name=" + this.state.borrower, "_self"))
         axios({
             method: 'post',
             url: '/api/borrow',

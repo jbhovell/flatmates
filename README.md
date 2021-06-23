@@ -64,6 +64,7 @@ The front page provides a simple user interface for listing, adding, searching u
 
 ```
 npm install
+pipenv install
 npm run dev
 python3 server.py
 ```
