@@ -32,7 +32,7 @@ class Index extends React.Component {
                 },
                 user: this.state.newuser
             }
-        }).then(resp => this.setState({username: ['jianfang', 'mark', 'alice', 'bob', `${resp.data.name}`]}))
+        }).then(() => this.loadState())
     }
     searchSubmitHandler = (event) => {
         event.preventDefault();
