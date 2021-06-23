@@ -5,7 +5,20 @@ import axios from 'axios';
 class Index extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { username: ['jianfang', 'mark', 'alice', 'bob']};
+        this.state = {users:[]}
+    }
+
+    loadState = () => {
+        axios({
+            method: 'get',
+            url: '/api/users',
+            data: {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                }
+            }
+        }).then(resp => this.setState({users: resp.data}))
     }
     addSubmitHandler = (event) => {
         event.preventDefault();
@@ -47,6 +60,7 @@ class Index extends React.Component {
     }
 
     render() {
+        this.loadState();
         const fmstyle = {
             fontFamily: "Arial",
             textAlign: "center"
@@ -96,7 +110,6 @@ class Index extends React.Component {
             borderColor: "#4CAF50",
             borderRadius: "5px"
         }
-
         return (
             <div style={fmstyle}>
                 <h1> Flatmates</h1>
@@ -107,9 +120,9 @@ class Index extends React.Component {
                     <div style={tablestyle}>
                         <table>
                           <tbody>
-                            <tr><td></td>{this.state.username.map((u,i)=><td style={td}key={i}>{u}</td>)}</tr>
+                            <tr><td></td>{this.state.users.map((u,i)=><td style={td}key={i}>{u.name}</td>)}</tr>
                             {
-                                this.state.username.map((u,i)=><tr key={i}><td style={td}>{u}</td></tr>)
+                                this.state.users.map((u,i)=><tr key={i}><td style={td}>{u.name}</td></tr>)
                             }
                          </tbody>
                         </table>
