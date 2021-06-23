@@ -5,7 +5,8 @@ import axios from 'axios';
 class Index extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { username: ['jianfang', 'mark', 'alice', 'bob']};
+        this.state = { username: ['alice', 'bob', 'mark', 'jianfang']};
+        
     }
     addSubmitHandler = (event) => {
         event.preventDefault();
@@ -46,7 +47,7 @@ class Index extends React.Component {
         this.setState({ [e.target.name]: e.target.value })
     }
 
-    render() {
+    async render() {
         const fmstyle = {
             fontFamily: "Arial",
             textAlign: "center"
@@ -101,27 +102,27 @@ class Index extends React.Component {
                     </h3>
                         <form onSubmit={this.addSubmitHandler}>
                             <input
-                                type='text' maxlength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
+                                type='text' maxLength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
                                 onChange={this.stateChangeHandler}
                             />
                         </form>
                         <form onSubmit={this.searchSubmitHandler}>
                             <input
-                                type='text' maxlength="10" size="10" placeholder="Search User" style={inputstyle} name="username"
+                                type='text' maxLength="10" size="10" placeholder="Search User" style={inputstyle} name="username"
                                 onChange={this.stateChangeHandler}
                             />
                         </form>
                         <form onSubmit={this.borrowSubmitHandler}>
                             <input
-                                type='text' maxlength="8" size="8" placeholder="lender" style={inputstyle} name="lender"
+                                type='text' maxLength="8" size="8" placeholder="lender" style={inputstyle} name="lender"
                                 onChange={this.stateChangeHandler}
                             />
                             <input
-                                type='text' maxlength="8" size="8" placeholder="borrower" style={inputstyle} name="borrower"
+                                type='text' maxLength="8" size="8" placeholder="borrower" style={inputstyle} name="borrower"
                                 onChange={this.stateChangeHandler}
                             />
                             <input
-                                type='text' maxlength="6" size="6" placeholder="amount" style={inputstyle} name="amount"
+                                type='text' maxLength="6" size="6" placeholder="amount" style={inputstyle} name="amount"
                                 onChange={this.stateChangeHandler}
                             />
                             <input
