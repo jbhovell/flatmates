@@ -34,10 +34,6 @@ class Index extends React.Component {
             }
         }).then(() => this.loadState())
     }
-    searchSubmitHandler = (event) => {
-        event.preventDefault();
-        window.open("/api/user?name=" + this.state.username, "_self")
-    }
     borrowSubmitHandler = (event) => {
         event.preventDefault();
         axios({
@@ -52,7 +48,7 @@ class Index extends React.Component {
                 borrower: this.state.borrower,
                 amount: parseFloat(this.state.amount).toFixed(2)
             }
-        }).then(() => window.open("/api/user?name=" + this.state.borrower, "_self"))
+        }).then(() => this.loadState())
     }
 
     stateChangeHandler = e => {
@@ -120,7 +116,7 @@ class Index extends React.Component {
                     <div style={tablestyle}>
                         <table>
                           <tbody>
-                            <tr><td></td>{this.state.users.map((u,i)=><td style={td}key={i}>{u.name}</td>)}</tr>
+                            <tr><td></td>{this.state.users.map((u,i)=><td style={td}key={i}>{`${u.name}(${u.balance})`}</td>)}</tr>
                             {
                                 this.state.users.map((u,i)=><tr key={i}><td style={td}>{u.name}</td></tr>)
                             }
@@ -130,12 +126,6 @@ class Index extends React.Component {
                         <form onSubmit={this.addSubmitHandler}>
                             <input
                                 type='text' maxLength="10" size="10" placeholder=" Add User" name="newuser" style={inputstyle}
-                                onChange={this.stateChangeHandler}
-                            />
-                        </form>
-                        <form onSubmit={this.searchSubmitHandler}>
-                            <input
-                                type='text' maxLength="10" size="10" placeholder="Search User" style={inputstyle} name="username"
                                 onChange={this.stateChangeHandler}
                             />
                         </form>
