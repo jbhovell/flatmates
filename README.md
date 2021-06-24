@@ -13,15 +13,6 @@ The front page provides a simple user interface for listing, adding users with b
 
 <img src="static/flatmates.png">
 
-
-# It uses
-
-- [x] React
-- [x] Webpack
-- [x] Babel
-- [x] python 3
-- [x] Flask
-
 # API specification
 
 #### User object
