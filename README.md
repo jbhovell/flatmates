@@ -9,7 +9,7 @@ The flatmates often borrow money from each other. They need an app to log who ow
 
 The project name comes from a BBC drama on iPlayer now.
 
-The front page provides a simple user interface for listing, adding, searching users and borrowing money.
+The front page provides a simple user interface for listing, adding users with balances and a form to lend money.
 
 <img src="static/flatmates.png">
 
