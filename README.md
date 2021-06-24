@@ -61,4 +61,7 @@ python3 server.py
 ```
 navigate to http://localhost:3000 in a browser
 
+## Todo
+the table shows the amount owed between every two persons.
+
 
