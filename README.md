@@ -61,4 +61,6 @@ add user should validate if the user already exists and user name length and pat
 
 unit tests for front and backend.
 
+add search user back. select user from a list, highlight the row/col of the table for the selected users. By default All is selected and no highlights in the table.
+
 
