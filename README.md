@@ -63,5 +63,7 @@ navigate to http://localhost:3000 in a browser
 
 ## Todo
 the table shows the amount owed between every two persons.
+lenders and borrowers should be a drop down list of users.
+add user should validate if the user already exists and user name length and patterns. 
 
 
