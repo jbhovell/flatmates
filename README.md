@@ -1,6 +1,6 @@
 # About
 
-I built this application to introduce the React framework to my backend dev teammates. I used Python and Flask to create the backend REST API. 
+I built this application to introduce the React framework to my backend dev teammates. I used Python and Flask to create the backend service API. 
 
 ### Scenario:
 ```
