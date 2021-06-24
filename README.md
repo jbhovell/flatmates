@@ -49,9 +49,9 @@ The front page provides a simple user interface for listing, adding users with b
 | Create user    | POST        | /api/add                    | `{"user":<name of new user (unique)>}`                                    | N/A                          | `<User object for new user>`                                                    |
 | Create borrow  | POST        | /api/borrow                   | `{"lender":<name of lender>,"borrower":<name of borrower>,"amount":5.25}` | N/A                          | `{"users":<updated User objects for <lender> and <borrower> (sorted by name)>}` |
 
-## Running the tests
+## Run the tests
 
-## Running the application
+## Run the application
 
 ```
 npm install
