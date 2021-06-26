@@ -52,7 +52,7 @@ python3 server.py
 ```
 navigate to http://localhost:3000 in a browser
 
-## Todo
+## To do
 the table shows the amount owed between every two persons.
 
 lenders and borrowers should be a drop down list of users.
